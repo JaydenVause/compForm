@@ -1,0 +1,33 @@
+<div class="row d-flex justify-content-center main">
+	<div class="col-sm-8 col-sm-offset-2">
+		<div class="form-container">
+			<div class="page-header text-center">
+				<h2 class="h2--competition_form">Summer Holidays Competition Form</h2>
+				<!-- links to parts of the form -->
+				<ul class="form-page-btns text-center">
+					<li><a ui-sref-active="active" ui-sref=".details"><i class="fas fa-id-card"></i></a></li>
+					<li><a ui-sref-active="active" ui-sref=".answer"><i class="far fa-comment-alt"></i></a></li>
+					<li><a ui-sref-active="active" ui-sref=".subscriptions"><i class="far fa-check-square"></i></a></li>
+				</ul>
+			</div>
+			 <div class="alert error" ng-show="showMessage">
+			    <a href="#" class="close" ng-click="closeMsg()" aria-label="close">&times;</a>
+			    <ul> 	
+			    	<li ng-repeat="(k, v) in alertMessage">
+			    		{{v}}
+			    	</li>
+			    </ul>
+			  </div>
+			<div role="alert" ng-show="success">
+				<strong>Success! </strong>Data saved successfully.
+			</div>
+			<div role="alert" ng-show="error">
+				<strong>Alert!</strong>Data saving failed.
+			</div>
+			<form class="form--competition_form" ng-submit="processForm()" name="competitionForm" novalidate>
+				<!-- nested states for forms will be injected here -->
+				<div id="competition-form-views" class="" ui-view></div>
+			</form>
+		</div>
+	</div>
+</div>

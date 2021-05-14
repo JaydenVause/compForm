@@ -1,0 +1,28 @@
+<h1><u>Subscriptions</u></h1>
+<div class="d-flex align-items-center flex-column">
+   <label class="form__label form__label--wide">Recieve Marketing & Updates?<input type="checkbox" name="marketing" class="form__input--checkbox" ng-model="formData.Marketing" name="marketing"></label><br>
+   <label class="form__label form__label--wide">
+      Do you agree to our 
+      <a id="a--terms_conditions" href="">
+         Terms & Conditions ?
+         <article id="terms_conditions_comp_form">
+            Terms of Use: Your Questions Answered
+            Before we look at what to include in your Terms of Use agreement, let's answer some common questions about what this agreement is and how it can help you.
+            What is a Terms of Use Agreement?
+            A Terms of Use agreement is a legal document. If you run a website, app, or virtually any other type of service, a Terms of Use agreement can help you:
+            Set the rules of engagement with your service
+            Explain how and why you may suspend or ban people from your service
+            Avoid or manage any potential legal issues
+         </article>
+      </a>
+      <input type="checkbox" name="Terms&conditions" class="form__input--checkbox" ng-model="formData.TermsConditions" name="termsConditions" required>
+   </label>
+   <br>
+   <span ng-show="competitionForm.termsConditions.$touched && competitionForm.termsConditions.$invalid">Required Field*</span>
+
+   <div>
+   </div>
+</div>
+<div class="btn-div">
+   <button type="submit" class="btn btn-block btn-primary" ng-disabled="competitionForm.$invalid">Submit</button>
+</div>

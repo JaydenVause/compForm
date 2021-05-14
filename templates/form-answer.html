@@ -1,0 +1,8 @@
+<h1><u>Entry</u></h1>
+<label class="form__label">What would you do with your winnings?</label><br />
+<span ng-show="competitionForm.entryAnswer.$touched && competitionForm.entryAnswer.$invalid">Required Field*</span>
+<textarea class="form__textarea" ng-model="formData.EntryAnswer" name="entryAnswer"></textarea>
+<br />
+<div class="btn-div">
+   <button ui-sref="form.subscriptions" class="btn btn-block btn-primary">Next Section</button>
+</div>

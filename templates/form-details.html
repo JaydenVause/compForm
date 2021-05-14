@@ -1,0 +1,31 @@
+<h1><u>Details</u></h1>
+<label class="form__label">First Name:
+<span  class="error-txt" ng-show="competitionForm.firstName.$touched && competitionForm.firstName.$invalid">Required Field*</span>
+</label>
+<br />
+<input class="form__input" type="text" ng-model="formData.FirstName" name="firstName" required />
+<br />
+
+<label class="form__label">Last Name:
+<span  class="error-txt" ng-show="competitionForm.lastName.$touched && competitionForm.lastName.$invalid">Required Field*</span>
+</label>
+<br />
+<input class="form__input" type="text" ng-model="formData.LastName" name="lastName" required /><br />
+
+<label class="form__label">Email Address:
+<span  class="error-txt" ng-show="competitionForm.emailAddress.$touched && competitionForm.emailAddress.$invalid">Required Field*</span>	
+</label>
+<br />
+<input class="form__input" type="email" ng-model="formData.EmailAddress" name="emailAddress" required />
+<br />
+
+<label class="form__label">Mobile Number:
+<span  class="error-txt" ng-show="competitionForm.mobileNumber.$touched && competitionForm.mobileNumber.$invalid">Required Field*</span>
+</label>
+<br />
+<input class="form__input" type="text" ng-model="formData.MobileNumber" name="mobileNumber" required />
+<br />
+
+<div class="btn-div">
+   <button ui-sref="form.answer" class="btn btn-block btn-primary">Next Section</button>
+</div>
